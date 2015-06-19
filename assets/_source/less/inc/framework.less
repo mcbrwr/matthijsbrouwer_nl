@@ -1,0 +1,235 @@
+
+// ----------------------------------
+// framework
+
+body {
+	.clearfix();
+	@media screen and (min-width: @screen-md-min){
+		padding-left: 25%;
+		&:before {
+			content: "";
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 75%;
+			bottom: 0;
+			background: @yellow;
+			z-index: -1;
+		}
+	}
+}
+
+.logo {
+	.box-out-left(@text-color);
+	display: inline-block;
+	color: #fff;
+	font-family: @font-alt;
+	font-size: 1.414em;
+	padding: 1em 1em .85em;
+	margin-right: 1em;
+	line-height: @line-height-sm;
+	//height: 3em;
+	float: left;
+	z-index: 1;
+	@media screen and (min-width: @screen-md-min){
+		margin-bottom: 1em;
+		margin-right: 0;
+		padding-top: 1em * @ratio-sm;
+		padding-left: .5em;
+		padding-right: .5em;
+		float: none;
+		display: block;
+		font-size: 1.8em;
+		//height: 2.5em;
+	}
+}
+
+.site-nav {
+	.clearfix();
+	background: @color-primary;
+	@media screen and (min-width: @screen-md-min){
+		background: transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 25%;
+		text-align: center;
+	}
+	@media screen and (min-width: @screen-md-min) and (min-height: 620px) {
+		position: fixed;
+	}
+	ul {
+		.reset();
+		float: left;
+		@media screen and (min-width: @screen-md-min){
+			float: none;
+		}
+		li {
+			margin-bottom: 1em * @ratio-sm;
+			display: inline-block;
+			@media screen and (min-width: @screen-md-min){
+				display: block;
+			}
+		}
+		a {
+			font-size: 1em * @ratio;
+			color: @text-color;
+			font-family: @font-alt;
+			display: block;
+			padding-top: .85em;
+			&:focus,
+			&:hover {
+				//text-decoration: none;
+				//text-shadow: 1px 1px 2px rgba(255,255,255,.7);
+			}
+		}
+		.active {
+			a {
+				color: @link-color;
+			}
+		}
+	}
+	figure {
+		display: none;
+		@media screen and (min-width: @screen-md-min){
+			display: block;
+		}
+		max-width: 5em;
+		margin: (1em * @ratio) auto (1em * @ratio-lg);
+	}
+	ul {
+	}
+}
+
+// ----------------------------------
+// the main text area
+
+main::before {
+	content: attr(data-sbtitle);
+  position: absolute;
+  z-index: -1;
+  
+  top: 90px;
+  left: -34%;
+  width: 35%;
+  
+  word-break: break-all;
+  font-size: 14vw;
+  font-family: 'Paytone One';
+  opacity: .4;
+  color: rgba(255,255,255,.3);
+  line-height: .6;
+  letter-spacing: -0.2em;
+  text-align: right;
+}
+
+.main {
+	padding: 0 1em 4em;
+	@media screen and (min-width: @screen-md-min){
+		padding: 0 4em 4em;
+	}
+	padding-bottom: 4em * @ratio;
+	position: relative;
+}
+
+.main-header {
+	margin-bottom: 2em * @ratio;
+	background-size: 100% auto;
+	background-size: cover;
+	background-position: 50% 50%;
+	> * {
+		max-width: 30em;
+	}
+	&.has_visual {
+		margin: 0 -1em 3em -1em;
+		@media screen and (min-width: @screen-md-min){
+			margin: 0 -4em 3em -4em;
+		}
+		padding-bottom: 3em;
+	}
+	figure { display: none; }
+	h1 {
+		margin-top: 0;
+	}
+	.meta {
+		font-family: @font-alt;
+		margin-top: -1em;
+	}
+	p {
+		font-size: @font-size-base * @ratio;
+		font-weight: 300;
+	}
+}
+
+// the max width for the main content items
+.main {
+	> p {
+		max-width: 45em;
+	}
+}
+
+
+.category-title {
+	font-family: @font-alt;
+	font-size: 1.8em;
+	line-height: @line-height-sm;
+	padding-top: 1em;
+	@media screen and (min-width: @screen-md-min){
+		padding-top: 1em * @ratio-sm;
+	}
+	margin-bottom: 1em;
+	color: @color-alt;
+}
+
+.header-text {
+	max-width: 44em;
+	margin-right: .5em;
+	@media screen and (min-width: @screen-md-min){
+		margin-right: 2em;
+	}
+	figure + & {
+		background: rgba(255,255,255,.7);
+		padding: 0 .5em 2em;
+		margin-left: .5em;
+		@media screen and (min-width: @screen-md-min){
+			margin-left: 2em;
+			padding: 0 2em 2em;
+		}
+	}
+}
+
+.main-text {
+	> * {
+		max-width: 40em;
+	}
+}
+
+// ----------------------------------
+// sitefooter
+
+.sitefooter {
+	max-width: 44em;
+	border-top: solid 1px @gray;
+	padding: .5em 0 1em;
+	margin: 2em 2em 0;
+	p {
+		margin: 0;
+		font-size: @font-size-sm;
+	}
+	b {
+		color: tomato;
+	}
+	@media screen and (min-width: @screen-tiny){
+		.clearfix();
+		p {
+			&:nth-of-type(1) {
+				float: left;
+			}
+			&:nth-of-type(2) {
+				float: right;
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.sprite-file {
+	background-image: url(/assets/sprite/icons.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(/assets/sprite/icons.svg);
+	background-image: linear-gradient(transparent, transparent), url(/assets/sprite/icons.svg);
+	background-repeat: no-repeat;
+}
+
+{{#svg}}
+{{#selector}}.{{expression}}{{^last}},
+{{/last}}{{/selector}} { {{#sprite}}
+	.sprite-file;
+	background-position: {{position}};{{/sprite}}{{^common}}{{#dimensions}}
+	display: inline-block;
+	text-indent: -999em;
+	width: {{width}}px;
+	height: {{height}}px;{{/dimensions}}{{/common}}
+}
+{{#selector}}.{{expression}}{{^last}},
+{{/last}}{{/selector}}-before { {{#sprite}}
+	&:before {
+		content: "";
+		.sprite-file;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: .3em;
+		background-position: {{position}};{{/sprite}}{{^common}}{{#dimensions}}
+		width: {{width}}px;
+		height: {{height}}px;{{/dimensions}}{{/common}}
+	}
+}
+{{#selector}}.{{expression}}{{^last}},
+{{/last}}{{/selector}}-after { {{#sprite}}
+	&:after {
+		content: "";
+		.sprite-file;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: .3em;
+		background-position: {{position}};{{/sprite}}{{^common}}{{#dimensions}}
+		width: {{width}}px;
+		height: {{height}}px;{{/dimensions}}{{/common}}
+	}
+}
+{{/svg}}

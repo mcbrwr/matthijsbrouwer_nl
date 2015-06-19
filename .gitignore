@@ -1,0 +1,10 @@
+*.log
+._*
+.DS_Store
+
+node_modules/*
+thumbs/*
+assets/_vendor/*
+content/*
+site/accounts/*
+site/cache/*
