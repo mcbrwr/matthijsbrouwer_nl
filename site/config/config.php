@@ -15,7 +15,7 @@ for more information: http://getkirby.com/license
 
 */
 
-c::set('license', '72ade774719c96516aac1b0a2bf5a677');
+require('license.php');
 
 /*
 

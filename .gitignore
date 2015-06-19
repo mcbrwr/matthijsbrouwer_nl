@@ -8,3 +8,4 @@ assets/_vendor/*
 content/*
 site/accounts/*
 site/cache/*
+site/config/license.php
