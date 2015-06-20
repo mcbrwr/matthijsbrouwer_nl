@@ -11,9 +11,9 @@
       <?php endif ?>
       <div class="header-text">
         <div class="category-title">Thoughts &amp; Writings</div>
-        <h1><?php echo $page->title()->html() ?></h1>
+        <h1><?php echo $page->title()->escape() ?></h1>
         <div class="meta">Published on 
-          <time datetime="<?php echo $page->date('c') ?>">
+          <time datetime="<?php echo $page->date('c')->escape(); ?>">
             <?php echo $page->date('d/m/Y') ?>
           </time>
         </div>
