@@ -18,6 +18,7 @@
       <div class="category-title">... <small>(just 3 dots)</small></div>
 
     <h1><?php echo $page->title()->h(); ?></h1>
+
     </header>
 
     <?php echo $page->headertext()->kirbytext() ?>
