@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Blogs
+title: Blog list
 
 pages: true
   template:
