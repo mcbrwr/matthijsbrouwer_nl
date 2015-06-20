@@ -1,6 +1,7 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Blogs
+
 pages: true
 	template:
 		blog
@@ -11,4 +12,4 @@ fields:
     type:  text
   text:
     label: Text
-    type:  textarea
+    type:  markdown
