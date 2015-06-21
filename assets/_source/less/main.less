@@ -10,16 +10,28 @@
 @import "inc/framework.less";
 
 
-// my settings
+/* ==========================================================================
+   colors
+   ========================================================================== */
+
+/* basic color definitions */
 @gray: #BBB;
 @gray-lighter: #E9E9E9;
 @black: #090909;
 @yellow: #FECB37;
-@purple: #B2096C;
+@red: #FF6347; // tomato
 
+@purple: #B2096C; // deprecated
+
+
+/* color assignments */
 @color-primary: @yellow;
-@color-alt: @purple;
+@color-alt: @red;
 
+
+/* ==========================================================================
+   ratio and ratio deratives
+   ========================================================================== */
 @ratio: 1.414; // augmented
 @ratio-xs: (1 / @ratio-lg);   // ~0,5
 @ratio-sm: (1 / @ratio);      // ~0,71
@@ -27,6 +39,10 @@
 @ratio-lg: pow(@ratio,2);     // ~2
 @ratio-xl: pow(@ratio,4);     // ~4
 
+
+/* ==========================================================================
+   text related vars
+   ========================================================================== */
 @font-size-base: 16px;
 @text-color: #333;
 

@@ -1,13 +1,11 @@
-
 // ----------------------------------
 // framework
 
 body {
-	.clearfix();
 	@media screen and (min-width: @screen-md-min){
 		padding-left: 25%;
 		&:before {
-			content: "";
+			content: "MAKING THINGS ON THE WEB THAT WORK FOR REAL PEOPLE";
 			display: block;
 			position: fixed;
 			top: 0;
@@ -15,7 +13,18 @@ body {
 			right: 75%;
 			bottom: 0;
 			background: @yellow;
-			z-index: -1;
+			z-index: -2;
+			overflow: hidden;
+
+			/* the text decoration styling */
+			padding-top: 90px;
+			word-break: break-all;
+		  font-size: 14vw;
+		  font-family: 'Paytone One';
+		  color: rgba(255,255,255,.13);
+		  line-height: .6;
+		  letter-spacing: -0.2em;
+		  text-align: right;
 		}
 	}
 }
@@ -25,13 +34,16 @@ body {
 	display: inline-block;
 	color: #fff;
 	font-family: @font-alt;
-	font-size: 1.414em;
+	font-size: 1em * @ratio;
 	padding: 1em 1em .85em;
 	margin-right: 1em;
 	line-height: @line-height-sm;
-	//height: 3em;
 	float: left;
 	z-index: 1;
+	letter-spacing: 0;
+	&:before {
+		border-bottom: solid .1em @color-alt;
+	}
 	@media screen and (min-width: @screen-md-min){
 		margin-bottom: 1em;
 		margin-right: 0;
@@ -41,7 +53,18 @@ body {
 		float: none;
 		display: block;
 		font-size: 1.8em;
-		//height: 2.5em;
+		&:focus,
+		&:hover {
+			letter-spacing: .03em;
+			.transition(.1s ease-in);
+			color: #fff;
+			text-decoration: none;
+			&:before {
+				.transition(.3s ease-in);
+				border-bottom: solid .1em #fff;
+				background: @red;
+			}
+		}
 	}
 }
 
@@ -102,27 +125,12 @@ body {
 	}
 }
 
-// ----------------------------------
-// the main text area
 
-main::before {
-	content: attr(data-sbtitle);
-  position: absolute;
-  z-index: -1;
-  
-  top: 90px;
-  left: -34%;
-  width: 35%;
-  
-  word-break: break-all;
-  font-size: 14vw;
-  font-family: 'Paytone One';
-  opacity: .4;
-  color: rgba(255,255,255,.3);
-  line-height: .6;
-  letter-spacing: -0.2em;
-  text-align: right;
-}
+/* ==========================================================================
+   The main section
+   ========================================================================== */
+
+
 
 .main {
 	padding: 0 1em 4em;
@@ -157,18 +165,9 @@ main::before {
 		margin-top: -1em;
 	}
 	p {
-		font-size: @font-size-base * @ratio;
-		font-weight: 300;
+		.lead;
 	}
 }
-
-// the max width for the main content items
-.main {
-	> p {
-		max-width: 45em;
-	}
-}
-
 
 .category-title {
 	font-family: @font-alt;
@@ -199,17 +198,43 @@ main::before {
 	}
 }
 
+/* ==========================================================================
+   main patterns
+   ========================================================================== */
+
 .main-text {
 	> * {
 		max-width: 40em;
 	}
 }
 
-// ----------------------------------
-// sitefooter
+h1 + .bloglist {
+	//margin-top: -1.5em;
+}
+
+/* p in a header is always a lead in */
+header {
+	p {
+		.lead;
+		margin: 0;
+	}
+}
+
+/* the max width for the main content items */
+.main {
+	> p {
+		max-width: 45em;
+	}
+}
+
+
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
 
 .sitefooter {
-	max-width: 44em;
+	//max-width: 44em;
 	border-top: solid 1px @gray;
 	padding: .5em 0 1em;
 	margin: 2em 2em 0;

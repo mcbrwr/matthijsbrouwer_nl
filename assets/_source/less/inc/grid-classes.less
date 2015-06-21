@@ -1,4 +1,7 @@
-// Media queries breakpoints
+/* ==========================================================================
+   Media query setup
+   ========================================================================== */
+
 @screen-tiny:           320px;
 @screen-tiny-max:       (@screen-xs-min - 1);
 @screen-xs-min:         320px;
@@ -10,10 +13,19 @@
 @screen-lg-min:         1200px;
 @screen-huge-min:       1600px;
 
-// container settings
+/* ==========================================================================
+   container variables
+   ========================================================================== */
 @max-container-width: 1000px;
 @container-spacing-xs: 15px;
 @container-spacing-sm: 30px;
 
 
-// == the classes
+/* ==========================================================================
+   grids
+   ========================================================================== */
+
+/* automagically dividing elements, with 3 in a row as optimal on lg screen  */
+.smartgrid-3 {
+	.divider-3();
+}

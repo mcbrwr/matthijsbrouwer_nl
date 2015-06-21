@@ -1,36 +1,7 @@
-.blogitem {
-	h1 {
-		font-size: @h3-lg;
-		margin: 0 0 .2em 0;
-	}
-	a {
-		color: @text-color;
-	}
-	header {
-		position: relative;
-	}
-	.meta {
-		color: @color-alt;
-		font-family: @font-alt;
-		background: #fff;
-		display: inline-block;
-		padding-right: 1em;
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 100%;
-			left: 0;
-			bottom: .6em;
-			border-bottom: solid 1px @color-alt;
-			z-index: -1;
-		}
-	}
-}
 
-.smartgrid-3 {
-	.divider-3();
-}
+/* ==========================================================================
+   projectlist
+   ========================================================================== */
 
 .projectlist {
 	.reset();
@@ -77,21 +48,72 @@
   }
 }
 
+/* ==========================================================================
+   bloglist shizzle
+   ========================================================================== */
 
-h1 + .bloglist {
-	margin-top: -1.5em;
+.blogitem {
+	h1 {
+		font-size: @h3-lg;
+		margin: 0 0 .2em 0;
+	}
+	a {
+		color: @text-color;
+		display: block;
+	}
+	header {
+		p {
+			margin-top: .2em;
+			font-size: 1.207em;
+		}
+	}
+	footer,
+	header {
+		position: relative;
+	}
+	.meta {
+		.clearfix();
+		color: @color-alt;
+		font-family: @font-alt;
+		time,
+		.tags {
+			font-size: .85em;
+			background: #fff;
+			display: inline-block;
+		}
+		time {
+			padding-right: 1em;
+			float: left;
+		}
+		.tags {
+			float: right;
+			padding-left: 1em;
+		}
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: .6em;
+			border-bottom: solid 1px @color-alt;
+			z-index: -1;
+		}
+	}
 }
+
 
 .bloglist {
 	.clearfix();
 	max-width: 80em;
 	> article {
-		margin-bottom: 2em;
+		margin-bottom: 3em;
 		@media screen and (min-width: 700px) and (max-width: 850px) {
 			float: left;
 			width: 46%;
 			&:nth-child(odd){
 				margin-right: 4%;
+				clear: left;
 			}
 			h1 {
 				min-height: 88px;
@@ -106,12 +128,7 @@ h1 + .bloglist {
 			width: 46%;
 			&:nth-child(odd){
 				margin-right: 4%;
-			}
-			h1 {
-				min-height: 88px;
-				display: flex;
-				align-items: flex-end;
-				a { display: block; }
+				clear: left;
 			}
 		}
 	}

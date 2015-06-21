@@ -10,7 +10,7 @@ fields:
   title:
     label: Title
     type:  text
-  categorytitle:
+  category_title:
     label: Category title
     type: text
   text:
