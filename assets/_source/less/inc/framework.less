@@ -2,6 +2,9 @@
 // framework
 
 body {
+	&:before{
+		display: none;
+	}
 	@media screen and (min-width: @screen-md-min){
 		padding-left: 25%;
 		&:before {
@@ -35,7 +38,7 @@ body {
 	color: #fff;
 	font-family: @font-alt;
 	font-size: 1em * @ratio;
-	padding: 1em 1em .85em;
+	padding: 1em .2em .85em;
 	margin-right: 1em;
 	line-height: @line-height-sm;
 	float: left;

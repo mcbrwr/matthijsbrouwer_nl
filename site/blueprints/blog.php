@@ -35,3 +35,11 @@ fields:
     header3: h4
     header4: h5
     header5: h6
+
+  meta:
+    label: Meta shizzle
+    type: headline
+  decotext:
+    label: Decotext behind the main nav
+  meta_description:
+    label: Meta description (SEO/Google)

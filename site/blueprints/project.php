@@ -23,3 +23,12 @@ fields:
   text:
     label: Text
     type:  textarea
+
+
+  meta:
+    label: Meta shizzle
+    type: headline
+  decotext:
+    label: Decotext behind the main nav
+  meta_description:
+    label: Meta description (SEO/Google)

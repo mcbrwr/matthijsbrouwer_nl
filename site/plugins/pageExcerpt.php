@@ -2,7 +2,7 @@
 
 function pageExcerpt($page, $length=150, $fields=false) {
 	if (empty($fields) or !is_array($fields)) {
-		$fields = array('title','subtitle','intro','text');
+		$fields = array('decotext','category_title','title','subtitle','intro','text');
 	}
 
 	$excerpt = '';

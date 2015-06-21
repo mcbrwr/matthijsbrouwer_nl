@@ -9,12 +9,19 @@ pages:
 fields:
   title:
     label: Title
-    type:  text
-  headertext:
-  	label: Headertext
-  	type: textarea
-  	size: small
+  category_title:
+    label: Category title
+  intro:
+  	label: Intro
+  	type: markdown
   text:
     label: Text
-    type:  textarea
-    size:  large
+    type:  markdown
+  
+  meta:
+    label: Meta shizzle
+    type: headline
+  decotext:
+    label: Decotext behind the main nav
+  meta_description:
+    label: Meta description (SEO/Google)

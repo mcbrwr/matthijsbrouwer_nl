@@ -5,16 +5,21 @@
 
 .projectlist {
 	.reset();
-	max-width: 80em;
+	//max-width: 80em;
+	margin: 0 -4em;
 	img {
 		width: 100%;
+	}
+	> * {
+		margin-bottom: 4em;
 	}
 }
 
 .project-thumb {
 	overflow: hidden;
-	background: @color-primary;
+	background: @text-color;
 	position: relative;
+	border-top: solid 3px @text-color;
 	h1 {
 		font-size: 2em;
 	}
@@ -23,28 +28,31 @@
 		font-family: @font-alt;
 	}
 	.project-text {
-		opacity: 1;
-		background: rgba(0,0,0,.8);
+		padding: 3em 4em;
 		color: #fff;
-		text-align: center;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-	  align-items: center;
-	  justify-content: center;
-	  .transition(.5s);
+		
+		// opacity: 1;
+		// background: rgba(0,0,0,.8);
+		// color: #fff;
+		// text-align: center;
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// width: 100%;
+		// height: 100%;
+		// display: flex;
+		// flex-wrap: wrap;
+	  // align-items: center;
+	  // justify-content: center;
+	  // .transition(.5s);
 	  > * {
 	  	width: 100%;
 	  }
 	}
   &:hover .project-text {
   	//top: 100%;
-  	opacity: 0;
-  	.transition(.5s);
+  	//opacity: 0;
+  	// .transition(.5s);
   }
 }
 

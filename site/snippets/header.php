@@ -7,7 +7,7 @@
 
   <title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
   
-  <meta name="description" content="<?php echo $site->description()->html() ?>">
+  <meta name="description" content="<?php e($page->meta_description()->empty(), $site->description()->html(), $page->meta_description()->html()) ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/main.min.css') ?>
@@ -15,7 +15,7 @@
 
 	<style type="text/css">
 		body::before {
-			content: "<?php echo strtoupper(pageExcerpt($page,$length = 150,$fields = array('category_title','title','intro'))); ?>";
+			content: "<?php echo strtoupper(pageExcerpt($page,$length = 150,$fields = array('decotext','category_title','title','intro'))); ?>";
 		}
 	</style>
 
@@ -24,3 +24,5 @@
 <body class="template-<?php echo $page->template(); ?>">
 
 <?php snippet('nav'); ?>
+
+<main class="main" role="main">
