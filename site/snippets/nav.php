@@ -1,9 +1,11 @@
-<nav class="site-nav" role="navigation">
-  <a class="logo" href="<?php echo url() ?>">
-    Matthijs Brouwer
-  </a>
+<header class="site-header" role="navigation">
+	<h1 class="site-logo">
+	  <a href="<?php echo url() ?>">Matthijs Brouwer</a>
+	</h1>
   <figure>
   	<img src="/assets/images/matthijs-sm.png" alt="Matthijs Brouwer">
   </figure>
-  <?php snippet('menu-flat') ?>
-</nav>
+  <nav class="site-nav">
+  	<?php snippet('menu-flat') ?>
+  </nav>
+</header>

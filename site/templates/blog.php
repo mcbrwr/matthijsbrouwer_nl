@@ -9,17 +9,22 @@
   <?php endif ?>
   <div class="header-text">
     <div class="category-title">Thoughts &amp; Writings</div>
-    <h1><?php echo $page->title()->escape() ?></h1>
+    <h1>
+      <?php echo $page->title()->html(); ?>
+    </h1>
+    <?php echo $page->subtitle()->kt(); ?>
     <div class="meta">Published on 
-      <time datetime="<?php echo $page->date('c')->escape(); ?>">
+      <time datetime="<?php echo $page->date('c'); ?>">
         <?php echo $page->date('d/m/Y') ?>
       </time>
     </div>
-    <?php echo $page->intro()->kirbytext() ?>
   </div>
 
 </header>
 
+<div class="lead">
+  <?php echo $page->intro()->kirbytext() ?>
+</div>
 <div class="main-text">
   <?php echo $page->text()->kirbytext() ?>
 </div>
