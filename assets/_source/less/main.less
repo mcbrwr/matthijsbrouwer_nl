@@ -8,7 +8,7 @@
 @import "inc/classes.less";
 @import "inc/grid-classes.less";
 @import "inc/framework.less";
-
+@import "bario/bario.less";
 
 /* ==========================================================================
    colors
@@ -22,7 +22,6 @@
 @red: #FF6347; // tomato
 
 @purple: #B2096C; // deprecated
-
 
 /* color assignments */
 @color-primary: @yellow;
@@ -39,12 +38,11 @@
 @ratio-lg: pow(@ratio,2);     // ~2
 @ratio-xl: pow(@ratio,4);     // ~4
 
-
 /* ==========================================================================
-   text related vars
+   text related color vars
    ========================================================================== */
-@font-size-base: 16px;
 @text-color: #333;
-
 @link-color: tomato;
 @link-hover-color: red;
+
+@selection-color: lighten(@color-alt,15%);
