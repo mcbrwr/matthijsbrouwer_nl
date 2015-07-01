@@ -8,6 +8,7 @@
 @import "inc/classes.less";
 @import "inc/grid-classes.less";
 @import "inc/framework.less";
+@import "inc/sitenav-logic.less";
 @import "bario/bario.less";
 
 /* ==========================================================================
@@ -42,7 +43,8 @@
    text related color vars
    ========================================================================== */
 @text-color: #333;
-@link-color: tomato;
-@link-hover-color: red;
+@link-color: @color-alt;
+@link-hover-color: @color-alt;
+// @link-hover-color: saturate(darken(@color-alt,5%),15%);
 
 @selection-color: lighten(@color-alt,15%);

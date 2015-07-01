@@ -5,7 +5,7 @@ body {
 	&:before{
 		display: none;
 	}
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		padding-left: 23%;
 		&:before {
 			content: "MAKING THINGS ON THE WEB THAT WORK FOR REAL PEOPLE";
@@ -41,19 +41,19 @@ body {
 	margin: 0;
 	& + * {
 		margin-left: 1.5em;
-		@media screen and (min-width: @breakpoint-menu){
+		@media screen and (min-width: @screen-lg-min){
 			margin-left: 0;
 		}
 	}
 	a {
 		display: block;
 		@media screen and (min-width: @screen-md-min){
-			font-size: 1em * @ratio;
+			font-size: 1.3em;
 		}
-		padding-top: 1em * @ratio-sm;
-		padding-bottom: 1em * @ratio-sm;
+		padding-top: 1em * .75em;
+		padding-bottom: 1em * .75em;
 	}
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		float: none;
 		display: block;
 	}
@@ -69,7 +69,7 @@ body {
 	&:before {
 		border-bottom: solid .25em @color-alt;
 	}
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		margin-bottom: 1em;
 		margin-right: 0;
 		&:focus,
@@ -89,15 +89,36 @@ body {
 		}		
 	}
 }
+#showmenu,
+#hidemenu {
+	float: right;
+	clear: right;
+	padding-right: 1em;
+	line-height: 1.1;
+	font-size: 1em;
+	margin: 0;
+	padding-top: 1em * .75em;
+	padding-bottom: 1em * .75em;
+	@media screen and (min-width: @screen-lg-min){
+		float: none;
+		display: block;
+	}
+}
+#hidemenu {
+	color: @text-color;
+}
 
 .site-header {
 	.clearfix();
-	font-size: 2.45vw;
+	font-size: 1em;
+	@media screen and (min-width: @screen-sm-min){
+		font-size: 2.45vw;
+	}
 	@media screen and (min-width: @screen-md-min){
 		font-size: 1em;		
 	}
 	background: @color-primary;
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		background: transparent;
 		position: absolute;
 		top: 0;
@@ -105,12 +126,12 @@ body {
 		width: 23%;
 		text-align: center;
 	}
-	@media screen and (min-width: @breakpoint-menu) and (min-height: 620px) {
+	@media screen and (min-width: @screen-lg-min) and (min-height: 620px) {
 		position: fixed;
 	}
 	figure {
 		display: none;
-		@media screen and (min-width: @breakpoint-menu){
+		@media screen and (min-width: @screen-lg-min){
 			display: block;
 		}
 		max-width: 5em;
@@ -118,38 +139,47 @@ body {
 	}
 }
 
-
 .site-nav {
 	ul {
 		.reset();
-		float: left;
-		@media screen and (min-width: @breakpoint-menu){
+		@media screen and (max-width: @screen-xs-max){
+			.clearfix();
+			padding-top: .5em;
+			padding-bottom: .5em;
+			position: absolute;
+		  right: 0;
+		  left: 0;
+		  height: auto;
+		  background: @color-primary;
+		  z-index: 1;
+		  top: 2.6em;
+		}
+		@media screen and (min-width: @screen-sm-min){
+			float: left;
+		}
+		@media screen and (min-width: @screen-lg-min){
 			float: none;
 		}
 		li {
+			.nav-item;
+			@media screen and (max-width: @screen-xs-max){
+				float: none;
+				a {
+					display: block;
+					padding: .5em 1em;
+					text-align: right;
+				}
+			}
 			&:first-child {
 				display: none;
 				& + li {
 					margin-left: 0;
 				}
-				@media screen and (min-width: @breakpoint-menu){
+				@media screen and (min-width: @screen-lg-min){
 					display: block;
 				}
 			}
-			.nav-item;
 		}
-		// a {
-		// 	font-size: 1em * @ratio;
-		// 	color: @text-color;
-		// 	font-family: @font-alt;
-		// 	display: block;
-		// 	padding-top: .85em;
-		// 	&:focus,
-		// 	&:hover {
-		// 		//text-decoration: none;
-		// 		//text-shadow: 1px 1px 2px rgba(255,255,255,.7);
-		// 	}
-		// }
 		.active {
 			a {
 				color: @link-color;
@@ -170,7 +200,7 @@ body {
 	@media screen and (min-width: @screen-sm-min){
 		padding: 2em 2em 7em;
 	}
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		padding: 0 4em 4em;
 	}
 	padding-bottom: 4em * @ratio;
@@ -187,7 +217,7 @@ body {
 	}
 	&.has_visual {
 		margin: -2em -2em 3em -2em;
-		@media screen and (min-width: @breakpoint-menu){
+		@media screen and (min-width: @screen-lg-min){
 			margin: 0 -4em 3em -4em;
 		}
 		padding-bottom: 3em;
@@ -219,21 +249,16 @@ body {
 	line-height: @line-height-sm;
 	color: @color-alt;
 	margin-bottom: .5em;
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		padding-top: 1em * @ratio-sm;
 		margin-bottom: 1em;
 	}
-	// .has_visual & {
-	// 		margin-left: 1.5em;
-	// 	@media screen and (max-width: @breakpoint-menu){
-	// 	}
-	// }
 }
 
 .header-text {
 	max-width: 50em;
 	margin-right: 1.5em;
-	@media screen and (min-width: @breakpoint-menu){
+	@media screen and (min-width: @screen-lg-min){
 		padding-top: 0;
 		margin-right: 2em;
 	}
@@ -242,7 +267,7 @@ body {
 		padding: 1.5em .5em 2em;
 		padding-top: 10vh;
 		margin-left: 1.5em;
-		@media screen and (min-width: @breakpoint-menu){
+		@media screen and (min-width: @screen-lg-min){
 			margin-left: 2em;
 			padding: 0 2em 2em;
 		}
