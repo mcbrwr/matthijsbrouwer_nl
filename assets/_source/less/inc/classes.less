@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    projectlist
    ========================================================================== */
@@ -16,30 +15,72 @@
 }
 
 .project-thumb {
-	overflow: hidden;
-	background: @text-color;
-	position: relative;
-	border-top: solid 3px @text-color;
-	h1 {
-		font-size: 2em;
-	}
-	.meta {
-		font-size: .85em;
-		font-family: @font-alt;
-	}
-	.project-text {
-		padding: 3em 4em;
-		color: #fff;
-	  > * {
-	  	width: 100%;
-	  }
-	}
-  &:hover .project-text {
-  	//top: 100%;
-  	//opacity: 0;
-  	// .transition(.5s);
-  }
+	// overflow: hidden;
+	// background: @text-color;
+	// position: relative;
+	// border-top: solid 3px @text-color;
+	// h1 {
+	// 	font-size: 2em;
+	// }
+	// .meta {
+	// 	font-size: .85em;
+	// 	font-family: @font-alt;
+	// }
+	// .project-text {
+	// 	padding: 3em 4em;
+	// 	color: #fff;
+	//   > * {
+	//   	width: 100%;
+	//   }
+	// }
+ //  &:hover .project-text {
+ //  	//top: 100%;
+ //  	//opacity: 0;
+ //  	// .transition(.5s);
+ //  }
 }
+
+/* ==========================================================================
+   portfolio
+   ========================================================================== */
+.portfolio-item {
+	margin-bottom: 8em;
+	img {
+		width: 100%;
+		display: block;
+		margin-bottom: -4.5em;
+	}
+	header, 
+	.portfolio-text {
+		margin: 0 -2em;
+		padding: 1em 2em;
+		@media screen and (min-width: @screen-lg-min){
+			margin: 0 -4em;
+			padding: 1em 4em;
+		}
+	}
+	header {
+		padding-top: 5em;
+		background-image: repeating-linear-gradient(45deg, #ccc 0px, #ccc 3px, #fff 3px, #fff 6px, #ccc 6px);
+		p {
+			font-size: 1em;
+			font-weight: 500;
+			color: @text-color;
+			text-shadow: 1px 1px 1px rgba(255,255,255,1);
+		}
+	}
+	h1 {
+		font-size: 2.5em;
+		margin: 0;
+	}
+	.portfolio-text {
+		border-top: @color-alt .3em solid;
+		background: @text-color;
+		color: #fff;
+		padding-bottom: 3em;
+	}
+}
+
 
 /* ==========================================================================
    bloglist shizzle

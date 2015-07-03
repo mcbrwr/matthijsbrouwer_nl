@@ -8,9 +8,6 @@ fields:
   title:
     label: Title
     type:  text
-  link:
-    label: Link
-    type:  text
   employer:
     label: Employer
     type:  radio
@@ -20,10 +17,18 @@ fields:
   tags:
     label: Tags
     type:  tags
+  visual:
+    label: Visual
+    type:  selector
+    mode:  single
+    types:
+      - image
   text:
     label: Text
     type:  textarea
-
+  link:
+    label: Link
+    type:  text
 
   meta:
     label: Meta shizzle
