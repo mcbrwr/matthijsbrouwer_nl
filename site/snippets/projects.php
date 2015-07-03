@@ -10,7 +10,7 @@
     <article class="project-thumb">
       <a href="<?php echo $project->link() ?>">
         <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): ?>
-          <?php echo thumb($image, 'width:1200|height:500|crop:true') ?>
+          <?php echo thumb($image, 'width:1200|height:400|crop:true') ?>
         <?php else: ?>
           <img src="/assets/images/website.jpg" alt="website icon">
         <?php endif ?>
