@@ -21,7 +21,6 @@
 			<?php if(!$project->visual()->empty()): ?>
 				<?php echo thumb($project->image($project->visual()), 'width:1200|height:400|crop:true') ?>
 			<?php elseif($project->hasImages()): ?>
-				askjdh
 				<?php echo thumb($project->images()->sortBy('sort', 'asc')->first(), 'width:1200|height:400|crop:true') ?>
 			<?php endif ?>
 			<header>
