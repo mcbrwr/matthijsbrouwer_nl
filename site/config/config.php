@@ -15,7 +15,8 @@ for more information: http://getkirby.com/license
 
 */
 
-require('license.php');
+if(file_exists('license.php'))
+    include 'license.php';
 
 /*
 
