@@ -7,7 +7,7 @@
 
 <?php echo $page->intro()->kirbytext() ?>
 
-<?php if ($pages->find('blog')->children()->visible()): ?>
+<?php if ($pages->find('blog')->children()->visible()->count() > 0): ?>
 	<section class="articles">
 	  <hr>
 	  <h1>Latest articles</h1>
