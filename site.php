@@ -2,7 +2,7 @@
 
 $kirby = kirby();
 
-if (isset(getenv('OPENSHIFT_DATA_DIR'))) {
+if (isset($_ENV['OPENSHIFT_DATA_DIR'])) {
 
 	$openshiftDataDir = getenv('OPENSHIFT_DATA_DIR');
 	
