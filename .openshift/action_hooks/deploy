@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "-- Linking content dir"
+ln -s $OPENSHIFT_DATA_DIR/content $OPENSHIFT_REPO_DIR/oscontent
+ln -s $OPENSHIFT_DATA_DIR/thumbs $OPENSHIFT_REPO_DIR/osthumbs
