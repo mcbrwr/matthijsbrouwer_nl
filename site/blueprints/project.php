@@ -17,12 +17,6 @@ fields:
   tags:
     label: Tags
     type:  tags
-  visual:
-    label: Visual
-    type:  selector
-    mode:  single
-    types:
-      - image
   text:
     label: Text
     type:  textarea
