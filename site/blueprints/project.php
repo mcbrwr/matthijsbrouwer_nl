@@ -8,12 +8,6 @@ fields:
   title:
     label: Title
     type:  text
-  align:
-    label: Title alignment
-    type: radio
-      options:
-        left: left
-        right: right
   employer:
     label: Employer
     type:  radio
