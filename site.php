@@ -17,8 +17,8 @@ if (isset($_ENV['OPENSHIFT_DATA_DIR'])) {
     // the openshift content dir is available through a soft link
     // wich is created at deployment by the script .openshift/action_hooks/deploy
     // this is so the regular content dir is still usable in dev environment
-    $kirby->urls->content   = $kirby->urls()->index() . '/oscontent';
-    $kirby->urls->thumbs    = $kirby->urls()->index() . '/osthumbs';
-    $kirby->urls->avatars   = $kirby->urls()->index() . '/osavatars';
+    // $kirby->urls->content   = $kirby->urls()->index() . '/oscontent';
+    // $kirby->urls->thumbs    = $kirby->urls()->index() . '/osthumbs';
+    // $kirby->urls->avatars   = $kirby->urls()->index() . '/osavatars';
     
 }

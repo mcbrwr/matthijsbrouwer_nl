@@ -1,4 +1,10 @@
 #!/bin/bash
-echo "-- Linking content dir"
-ln -s $OPENSHIFT_DATA_DIR/content $OPENSHIFT_REPO_DIR/oscontent
-ln -s $OPENSHIFT_DATA_DIR/thumbs $OPENSHIFT_REPO_DIR/osthumbs
+echo "-- Linking content dirs to openshift datadir"
+if [ -d "$OPENSHIFT_REPO_DIR/content" ]; then
+	rm -rf $OPENSHIFT_REPO_DIR/content
+fi
+if [ -d "$OPENSHIFT_REPO_DIR/thumbs" ]; then
+	rm -rf $OPENSHIFT_REPO_DIR/thumbs
+fi
+ln -s $OPENSHIFT_DATA_DIR/content $OPENSHIFT_REPO_DIR/content
+ln -s $OPENSHIFT_DATA_DIR/thumbs $OPENSHIFT_REPO_DIR/thumbs
