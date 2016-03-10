@@ -15,6 +15,10 @@ for more information: http://getkirby.com/license
 
 */
 
+c::set('cache',true);
+c::set('cache.driver', 'file');
+// c::set('cache.root', __DIR__ . DS . 'cache');
+
 if(file_exists('license.php'))
     include 'license.php';
 

@@ -2,6 +2,8 @@
 
 $kirby = kirby();
 
+// $kirby->roots->cache    = $kirby->roots->index . DS . 'cache';
+
 if (isset($_ENV['OPENSHIFT_DATA_DIR'])) {
 
     $openshiftDataDir = getenv('OPENSHIFT_DATA_DIR');
@@ -12,7 +14,6 @@ if (isset($_ENV['OPENSHIFT_DATA_DIR'])) {
     $kirby->roots->cache    = $openshiftDataDir . DS . 'cache';
     $kirby->roots->avatars  = $openshiftDataDir . DS . 'avatars';
     $kirby->roots->accounts = $openshiftDataDir . DS . 'accounts';
-    $kirby->roots->cache    = $openshiftDataDir . DS . 'cache';
 
     if (file_exists($openshiftDataDir . DS . '/license.php')) {
         include($openshiftDataDir . DS . '/license.php');
