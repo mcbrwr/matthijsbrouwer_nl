@@ -39,7 +39,7 @@ class Value {
     // take the current time
     $time = time();
 
-    $this->value   = "CACHED VERSION" . $value;
+    $this->value   = $value;
     $this->expires = $time + ($minutes * 60);
     $this->created = $time;
 
