@@ -7,15 +7,16 @@
 
 <?php echo $page->intro()->kirbytext() ?>
 
-
-<section class="articles">
-  <hr>
-  <h1>Latest articles</h1>
-  <div class="bloglist">
-    <?php foreach ($pages->find('blog')->children()->visible()->slice(0,4) as $blog): ?>
-      <?php snippet('blogitem',array('item' => $blog)); ?>
-    <?php endforeach ?>
-  </div>
-</section>
+<?php if ( $pages->find('blog')->children()->visible()->count() ): ?>
+	<section class="articles">
+	  <hr>
+	  <h1>Latest articles</h1>
+	  <div class="bloglist">
+	    <?php foreach ($pages->find('blog')->children()->visible()->slice(0,4) as $blog): ?>
+	      <?php snippet('blogitem',array('item' => $blog)); ?>
+	    <?php endforeach ?>
+	  </div>
+	</section>
+<?php endif ?>
 
 <?php snippet('footer') ?>
