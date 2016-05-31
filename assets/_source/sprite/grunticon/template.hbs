@@ -1,0 +1,38 @@
+{{#each customselectors}}
+{{this}},
+{{/each}}
+{{prefix}}{{name}}(@factor:1) {
+  background-image: url('/dist/sprite/png/{{name}}.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('{{datauri}}');
+  background-image: linear-gradient(transparent, transparent), url('{{datauri}}');
+  background-repeat: no-repeat;{{#width}}
+  width: ({{this}} * @factor);{{/width}}{{#height}}
+  height: ({{this}} * @factor);{{/height}}
+  background-size: 100% 100%;
+  text-indent: -999em;
+  display: inline-block;
+}
+
+{{#each customselectors}}
+{{this}},
+{{/each}}
+{{prefix}}{{name}}-before(@factor:1; @valign: middle; @margin: .5em;) {
+  &:before {
+    content: "";
+    {{prefix}}{{name}}(@factor);
+    vertical-align: @valign;
+    margin-right: @margin;
+  }
+}
+
+{{#each customselectors}}
+{{this}},
+{{/each}}
+{{prefix}}{{name}}-after(@factor:1; @valign: middle; @margin: .5em;) {
+  &:after {
+    content: "";
+    {{prefix}}{{name}}(@factor);
+    vertical-align: @valign;
+    margin-left: @margin;
+  }
+}

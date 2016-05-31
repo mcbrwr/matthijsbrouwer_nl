@@ -1,0 +1,51 @@
+@import "../../_vendor/bootstrap/less/variables.less";
+@import "../../_vendor/bootstrap/less/normalize.less";
+@import "../../_vendor/bootstrap/less/mixins.less";
+
+@import "inc/mixins.less";
+@import "inc/reset.less";
+@import "inc/type.less";
+@import "inc/classes.less";
+@import "inc/grid-classes.less";
+@import "inc/framework.less";
+@import "inc/sitenav-logic.less";
+@import "fonts/bario.less";
+@import "fonts/paytoneone.less";
+
+/* ==========================================================================
+   colors
+   ========================================================================== */
+
+/* basic color definitions */
+@gray: #BBB;
+@gray-lighter: #E9E9E9;
+@black: #090909;
+@yellow: #FECB37;
+@red: #FF6347; // tomato
+
+@purple: #B2096C; // deprecated
+
+/* color assignments */
+@color-primary: @yellow;
+@color-alt: @red;
+
+
+/* ==========================================================================
+   ratio and ratio deratives
+   ========================================================================== */
+@ratio: 1.414; // augmented
+@ratio-xs: (1 / @ratio-lg);   // ~0,5
+@ratio-sm: (1 / @ratio);      // ~0,71
+@ratio-md: @ratio;
+@ratio-lg: pow(@ratio,2);     // ~2
+@ratio-xl: pow(@ratio,4);     // ~4
+
+/* ==========================================================================
+   text related color vars
+   ========================================================================== */
+@text-color: #333;
+@link-color: @color-alt;
+@link-hover-color: @color-alt;
+// @link-hover-color: saturate(darken(@color-alt,5%),15%);
+
+@selection-color: lighten(@color-alt,15%);

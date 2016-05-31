@@ -1,0 +1,35 @@
+/*
+ * Site nav logic
+ */
+
+.site-nav {
+	ul {
+		display: none;
+		@media screen and (min-width: @screen-sm-min){
+			display: block;
+		}
+	}
+}
+
+#showmenu {
+	&:target {
+		display: none;
+		& ~ ul {
+			display: block;
+			border-bottom: solid .2em @color-alt;
+		}
+		& ~ a {
+			display: block;
+		}
+
+	}
+	@media screen and (min-width: @screen-sm-min){
+		display: none;
+	}
+}
+#hidemenu {
+	display: none;
+	@media screen and (min-width: @screen-sm-min){
+		display: none!important;
+	}
+}

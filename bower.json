@@ -1,0 +1,23 @@
+{
+  "name": "Matthijs Brouwer",
+  "version": "0.0.1",
+  "authors": [
+    "M.C. Brouwer <matthijs@artandflywork.org>"
+  ],
+  "description": "Personal website",
+  "main": "index.php",
+  "license": "GPLv3",
+  "homepage": "http://matthijsbrouwer.nl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/_vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
