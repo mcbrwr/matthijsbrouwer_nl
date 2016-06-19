@@ -11,11 +11,11 @@ fields:
     label: Text
     type:  textarea
 
-  categorytitle:
-    label: Category title
   meta:
     label: Meta shizzle
     type: headline
+  categorytitle:
+    label: Category title
   decotext:
     label: Decotext behind the main nav
   meta_description:
