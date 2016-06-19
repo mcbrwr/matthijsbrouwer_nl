@@ -11,6 +11,8 @@ fields:
     label: Text
     type:  textarea
 
+  categorytitle:
+    label: Category title
   meta:
     label: Meta shizzle
     type: headline

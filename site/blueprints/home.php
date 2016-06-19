@@ -18,6 +18,8 @@ fields:
     label: Text
     type:  markdown
   
+  categorytitle:
+    label: Category title
   meta:
     label: Meta shizzle
     type: headline

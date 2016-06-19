@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <header>
-  <div class="category-title">... <small>(just 3 dots)</small></div>
+  <div class="category-title"><?php echo $page->categorytitle()->or('...') ?></div>
   <h1><?php echo $page->title()->h(); ?></h1>
 </header>
 
