@@ -16,7 +16,7 @@
 </header>
 
 <div class="bloglist">
-  <?php foreach ($page->children()->visible() as $blog): ?>
+  <?php foreach ($page->children()->visible()->sortBy('date', 'desc') as $blog): ?>
   	<?php snippet('blogitem',array('item' => $blog)); ?>
   <?php endforeach ?>
 </div>
