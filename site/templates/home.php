@@ -20,3 +20,4 @@
 <?php endif ?>
 
 <?php snippet('footer') ?>
+<!-- test -->
