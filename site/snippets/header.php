@@ -11,7 +11,7 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/main.min.css') ?>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Quicksand|Paytone+One|Oxygen:400,300,700' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:700|Fira+Sans:300,400,400i,700" rel="stylesheet">
 
 	<style type="text/css">
 		body::before {
