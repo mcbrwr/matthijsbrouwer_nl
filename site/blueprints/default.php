@@ -3,6 +3,9 @@
 title: Page
 pages: true
 files: true
+  fields:
+    alt:
+      label: Alt text
 fields:
   title:
     label: Title

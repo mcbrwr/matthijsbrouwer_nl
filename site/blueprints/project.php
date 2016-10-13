@@ -4,6 +4,9 @@ title: Project
 pages: false
 files:
   sortable: true
+  fields:
+    alt:
+      label: Alt text
 fields:
   title:
     label: Title

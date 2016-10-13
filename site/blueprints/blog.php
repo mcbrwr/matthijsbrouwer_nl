@@ -3,6 +3,9 @@
 title: blog
 pages: false
 files: true
+  fields:
+    alt:
+      label: Alt text
 fields:
   visual:
     label: Visual
