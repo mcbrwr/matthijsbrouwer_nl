@@ -1,14 +1,10 @@
 <?php snippet('header') ?>
 
-<?php 
-$headerImgUrl = $page->images()->first()->thumb('width:1414|height:1000|crop:true|quality:65')->url();
- ?>
-
-<header class="main-header<?php if ( $page->hasImages() ) echo ' has_visual'?>" <?php if ( $page->hasImages() ) : ?>style="background-image: url(<?php echo $headerImgUrl; ?>)"<?php endif; ?>>
+<header class="main-header<?php if ( $page->hasImages() ) echo ' has_visual'?>" <?php if ( $page->hasImages() ) : ?>style="background-image: url(<?php echo $visualUrl; ?>)"<?php endif; ?>>
 
   <?php if ( $page->hasImages() ): ?>
     <figure class="header-visual">
-      <img src="<?php echo $headerImgUrl; ?>" alt="<?php echo $page->images()->first()->alt(); ?>">
+      <img src="<?php echo $visualUrl; ?>" alt="<?php echo $visualAlt; ?>">
     </figure>
   <?php endif ?>
   <div class="header-text">
