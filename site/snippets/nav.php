@@ -6,8 +6,8 @@
   	<img src="/assets/images/matthijs-sm.png" alt="Matthijs Brouwer">
   </figure>
   <nav class="site-nav">
-  	<a id="showmenu" href="#showmenu">Menu</a>
-  	<a id="hidemenu" href="#">&times;</a>
+  	<a id="showmenu" href="#showmenu" aria-hidden="true">Menu</a>
+  	<a id="hidemenu" href="#" aria-hidden="true">&times;</a>
   	<?php snippet('menu-flat') ?>
   </nav>
 </header>
