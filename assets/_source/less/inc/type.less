@@ -29,8 +29,12 @@ h1, h2, h3, h4, h5, h6,
 	font-family: @font-headings;
 	line-height: @line-height-sm;
 	font-weight: 700;
-	&:first-child { margin-top: 0; }
-	p + & { margin-top: (1em * @ratio-lg); }
+	&:first-child { 
+    margin-top: 0; 
+  }
+	&:not(:first-child){ 
+    margin-top: (1em * @ratio-lg); 
+  }
 }
 main > header h1 {
   font-family: 'Paytone One', 'Fira Mono', sans-serif;

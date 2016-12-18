@@ -36,3 +36,14 @@
 .smartgrid-3 {
 	.divider-3();
 }
+
+.split {
+	.flex-display();
+	.flex-wrap(wrap);
+	margin-left: -.5em;
+	margin-right: -.5em;
+	> * {
+		.flex(1 1 45%);
+		margin: .5em;
+	}
+}
