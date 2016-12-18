@@ -33,9 +33,9 @@
 			<div class="portfolio-text">
 				<div class="title">
 					<?php echo $project->text()->kt(); ?>
-					<div class="meta">
+					<!-- <div class="meta">
 						
-					</div>
+					</div> -->
 				</div>
 				<?php if ($project->link()->notEmpty()): ?>
 					<footer>
