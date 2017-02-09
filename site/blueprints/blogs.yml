@@ -1,23 +1,21 @@
-<?php if(!defined('KIRBY')) exit ?>
+title: Blog list
 
-title: Home
-pages:
+pages: true
   template:
     blog
-    default
-    projects
+files: true
+  fields:
+      alt:
+        label: Alt text
 fields:
   title:
     label: Title
   category_title:
     label: Category title
-  intro:
-  	label: Intro
-  	type: markdown
   text:
     label: Text
     type:  markdown
-  
+
   meta:
     label: Meta shizzle
     type: headline
