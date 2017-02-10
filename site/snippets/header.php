@@ -11,6 +11,7 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/main.min.css') ?>
+
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono:700%7CFira+Sans:300,400,400i,700" rel="stylesheet">
 
 	<style type="text/css">
