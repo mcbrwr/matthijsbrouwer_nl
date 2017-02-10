@@ -24,7 +24,7 @@
 				<?php echo thumb($project->images()->sortBy('sort', 'asc')->first(), 'width:1200|height:400|crop:true') ?>
 			<?php endif ?>
 			<header>
-				<h1><?php echo $project->title()->html() ?></h1>
+				<h2><?php echo $project->title()->html() ?></h2>
 				<p class="meta">
 					@<?php echo $project->employer() ?> / 
 							tags: <?php echo $project->tags() ?>

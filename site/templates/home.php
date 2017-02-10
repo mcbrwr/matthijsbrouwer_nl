@@ -10,7 +10,7 @@
 <?php if ( $pages->find('blog')->children()->visible()->count() ): ?>
 	<section class="articles">
 	  <hr>
-	  <h1>Latest articles</h1>
+	  <h2>Latest articles</h2>
 	  <div class="bloglist">
 	    <?php foreach ($pages->find('blog')->children()->visible()->sortBy('date', 'desc')->slice(0,4) as $blog): ?>
 	      <?php snippet('blogitem',array('item' => $blog)); ?>

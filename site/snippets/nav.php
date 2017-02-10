@@ -1,7 +1,7 @@
 <header class="site-header">
-	<h1 class="site-logo">
+	<div class="site-logo">
 	  <a href="<?php echo url() ?>">Matthijs Brouwer</a>
-	</h1>
+	</div>
   <figure>
   	<img src="/assets/images/matthijs-sm.png" alt="Matthijs Brouwer">
   </figure>
