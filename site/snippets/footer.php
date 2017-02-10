@@ -1,6 +1,6 @@
 	</main>
 	
-	<footer class="sitefooter" role="contentinfo">
+	<footer class="sitefooter">
 	  <?php echo $site->copyright()->kirbytext() ?>
 	  <p class="colophon">Site made with <b>&hearts;</b> and <a href="http://getkirby.com">Kirby</a></p>
 	</footer>
