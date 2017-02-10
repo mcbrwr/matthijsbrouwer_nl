@@ -1,4 +1,4 @@
-<header class="site-header" role="navigation">
+<header class="site-header">
 	<h1 class="site-logo">
 	  <a href="<?php echo url() ?>">Matthijs Brouwer</a>
 	</h1>
