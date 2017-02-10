@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-<header class="main-header<?php if ( $page->hasImages() ) echo ' has_visual'?>">
+<header class="main-header">
   
   <div class="category-title"><?php echo $page->categorytitle()->or('...') ?></div>
 
