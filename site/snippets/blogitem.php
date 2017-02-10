@@ -1,7 +1,7 @@
 <a class="blogitem" href="<?php echo $item->url() ?>">
   <article>
     <header>
-      <h1><?php echo $item->title()->html(); ?></h1>
+      <h3><?php echo $item->title()->html(); ?></h3>
     </header>
     <p><?php echo $item->subtitle()->html(); ?></p>
     <footer>
@@ -16,5 +16,3 @@
     </footer>
   </article>
 </a>
-
-  
