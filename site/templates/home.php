@@ -18,5 +18,5 @@
 	  </div>
 	</section>
 <?php endif ?>
-<h2>TEST</h2>
+
 <?php snippet('footer') ?>
