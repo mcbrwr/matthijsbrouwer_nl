@@ -15,7 +15,7 @@ for more information: http://getkirby.com/license
 
 */
 
-// c::set('cache',true);
+c::set('panel.install',true);
 // c::set('cache.driver', 'file');
 // c::set('cache.root', __DIR__ . DS . 'cache');
 
